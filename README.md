@@ -3,9 +3,18 @@ CLI to fetch data on "todos" from a given API in a number of ways. Utilising som
 
 Tool is centred around 3 core commands with additional arguments.
 
-## Docker Build
+## Architecture
+A simplistic take on **Clean** without `infra` layer (this was an evening's efforts...). This enables additional adapters such as adding a HTTP layer - just add route handlers and the the app will return the same data without needing to modify the service or domain logic.
+
+## Docker Setup
+### Build
 ```
 docker build . -t todo-cli
+```
+
+### Run
+```
+docker run cli -param=value
 ```
 
 ## Commands
@@ -61,9 +70,7 @@ INFO[0000] Response received    completed=false id=68 title="aut id perspiciatis
 ERRO[0000] No results found for id: 2323    command=fetchone
 ```
 
-## Architecture
-A simplistic take on **Clean** without `infra` layer (this was an evening's efforts...).
-
+## Structure
 ```
 /
 │
