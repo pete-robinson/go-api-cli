@@ -20,25 +20,12 @@ docker run cli -param=value
 ## Commands
 ### fetchall
 Fetches entire list of results. Supports result limiting via `-count` argument.
-
-#### Local
-```
-go run main.go -command=fetchall -count=10
-```
-
-#### Docker
 ```
 docker run cli -command=fetchall -count=10
 ```
 
 ### fetchone
 Fetches one result - requires `-id` argument.
-#### Local
-```
-go run main.go -command=fetchone -id=20
-```
-
-#### Docker
 ```
 docker run cli -command=fetchone -id=20
 ```
@@ -47,11 +34,6 @@ docker run cli -command=fetchone -id=20
 Accepts an absolute file path (via `-list` argument). Uses worker pools to fetch results concurrently. `data/sample.csv` is the sample data.
 
 Can be optimised a little further but is initially taking 2s to make 100 separate calls synchronously compared to ~500ms when fetched async using worker pools.
-#### Local
-```
-go run main.go -command=fetchlist -list=/path/to/file.csv
-```
-#### Docker
 ```
 docker run cli -command=fetchlist -list=/build/data/sample.csv
 ```
