@@ -38,8 +38,13 @@ docker run cli -command=fetchone -id=20
 Accepts an absolute file path (via `-list` argument). Uses worker pools to fetch results concurrently. `data/sample.csv` is the sample data.
 
 Can be optimised a little further but is initially taking 2s to make 100 separate calls synchronously compared to ~500ms when fetched async using worker pools.
+#### Local
 ```
 go run main.go -command=fetchlist -list=/path/to/file.csv
+```
+#### Docker
+```
+docker run cli -command=fetchlist -list=/build/data/sample.csv
 ```
 
 ## Result format

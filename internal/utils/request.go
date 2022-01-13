@@ -10,6 +10,7 @@ func MakeRequest(url string) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	defer res.Body.Close()
 
 	resp, err := ioutil.ReadAll(res.Body)
 	if err != nil {
