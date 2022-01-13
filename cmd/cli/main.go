@@ -16,7 +16,7 @@ func main() {
 	opts := &cli.Options{}
 	flag.StringVar(&opts.Command, "command", "fetchall", "Command to run")
 	flag.IntVar(&opts.NumResults, "count", 10, "Number of results to return")
-	flag.IntVar(&opts.Id, "id", 0, "Number of results to return")
+	flag.IntVar(&opts.Id, "id", 0, "Id of entity to retrieve")
 	flag.StringVar(&opts.List, "list", "", "Fetch all results from a given list")
 	flag.Parse()
 
