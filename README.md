@@ -14,20 +14,20 @@ docker build . -t todo-cli
 
 ### Run
 ```
-docker run cli -param=value
+docker run todo-cli -param=value
 ```
 
 ## Commands
 ### fetchall
 Fetches entire list of results. Supports result limiting via `-count` argument.
 ```
-docker run cli -command=fetchall -count=10
+docker run todo-cli -command=fetchall -count=10
 ```
 
 ### fetchone
 Fetches one result - requires `-id` argument.
 ```
-docker run cli -command=fetchone -id=20
+docker run todo-cli -command=fetchone -id=20
 ```
 
 ### fetchlist
@@ -35,7 +35,7 @@ Accepts an absolute file path (via `-list` argument). Uses worker pools to fetch
 
 Can be optimised a little further but is initially taking 2s to make 100 separate calls synchronously compared to ~500ms when fetched async using worker pools.
 ```
-docker run cli -command=fetchlist -list=/build/data/sample.csv
+docker run todo-cli -command=fetchlist -list=/build/data/sample.csv
 ```
 
 ## Result format
