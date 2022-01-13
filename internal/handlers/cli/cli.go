@@ -56,7 +56,7 @@ func (s *CliHandler) Dispatch() error {
 			return err
 		}
 
-		// loop over results and spit them out - add a hacky time delay
+		// loop over results and spit them out
 		for _, r := range res {
 			s.LogTodoOutput(r)
 		}
