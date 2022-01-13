@@ -2,7 +2,6 @@ package cli
 
 import (
 	"errors"
-	"time"
 
 	"github.com/pete-robinson/go-cli-test/internal/domain/model"
 	log "github.com/sirupsen/logrus"
@@ -60,7 +59,6 @@ func (s *CliHandler) Dispatch() error {
 		// loop over results and spit them out - add a hacky time delay
 		for _, r := range res {
 			s.LogTodoOutput(r)
-			time.Sleep(time.Second / 8)
 		}
 
 	// fetch a single entry
