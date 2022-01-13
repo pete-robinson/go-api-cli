@@ -31,7 +31,7 @@ func main() {
 	repo := repository.NewTodoRepository(baseUrl)
 
 	// boot todo service
-	todoService := services.NewTodoService(opts.NumResults, repo)
+	todoService := services.NewTodoService(repo)
 
 	// init the handler
 	handler := cli.New(

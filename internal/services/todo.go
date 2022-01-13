@@ -18,14 +18,12 @@ type Repository interface {
 
 // todo service
 type TodoService struct {
-	numResults int
 	repository Repository
 }
 
 // create new todo service
-func NewTodoService(numResults int, repository Repository) *TodoService {
+func NewTodoService(repository Repository) *TodoService {
 	return &TodoService{
-		numResults: numResults,
 		repository: repository,
 	}
 }
