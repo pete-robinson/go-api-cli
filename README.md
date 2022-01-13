@@ -1,4 +1,4 @@
-# Fun evening CLI project
+# Async API Cli
 CLI to fetch data on "todos" from a given API in a number of ways. Utilising some basic concurrency via worker pools to speed up multiple API calls.
 
 Tool is centred around 3 core commands with additional arguments.
